@@ -1,4 +1,4 @@
-package com.example.jd.quiz.answers.abstract_factory;
+package com.example.jd.quiz.logic.abstract_factory;
 
 public class NumberOfTheDay {
 
