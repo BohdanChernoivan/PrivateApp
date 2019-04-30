@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.jd.quiz.R;
@@ -15,6 +16,8 @@ public class ShowAnswer extends AppCompatActivity implements CreateAnswersOfDay.
 
     Intent intent;
     TextView textView;
+    LinearLayout layout;
+    CreateAnswersOfDay createDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,17 +32,26 @@ public class ShowAnswer extends AppCompatActivity implements CreateAnswersOfDay.
     }
 
     private void control() {
-        Intent intent = getIntent();
+        intent = getIntent();
+        layout = findViewById(R.id.ScrLayout);
+        createDay = new CreateAnswersOfDay(this);
     }
 
     @Override
     public void createAnswersOnDay(int number) {
 
         NumberOfTheDay numberOfTheDay = DayStorage.getNumberDayList().get(number);
+
         for (int i = 0; i < 30; i++) {
-            View view = getLayoutInflater().inflate(R.layout.scroll_answer, null);
+
+            View view = getLayoutInflater().inflate(R.layout.sketch_answers, null);
 
             textView = view.findViewById(R.id.view_ask_answer);
+
+            textView.setText(String.valueOf(i+1 + " ask = " + numberOfTheDay.getArrayAnswer()[i] + " answer"));
+
+            layout.addView(view);
+
         }
     }
 }
