@@ -28,12 +28,15 @@ public class ShowAnswer extends AppCompatActivity implements CreateAnswersOfDay.
 
         final int intExtra = intent.getIntExtra("Number", 0);
 
+        setTitle("Day " + (intExtra + 1));
+
         createAnswersOnDay(intExtra);
     }
 
     private void control() {
         intent = getIntent();
         layout = findViewById(R.id.ScrLayout);
+        getSupportActionBar();
         createDay = new CreateAnswersOfDay(this);
     }
 
@@ -42,13 +45,13 @@ public class ShowAnswer extends AppCompatActivity implements CreateAnswersOfDay.
 
         NumberOfTheDay numberOfTheDay = DayStorage.getNumberDayList().get(number);
 
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < numberOfTheDay.getArrayAnswer().length; i++) {
 
             View view = getLayoutInflater().inflate(R.layout.sketch_answers, null);
 
             textView = view.findViewById(R.id.view_ask_answer);
 
-            textView.setText(String.valueOf(i+1 + " ask = " + numberOfTheDay.getArrayAnswer()[i] + " answer"));
+            textView.setText(String.valueOf((i+1) + " ask  =  " + numberOfTheDay.getArrayAnswer()[i] + " answer"));
 
             layout.addView(view);
 

@@ -3,7 +3,6 @@ package com.example.jd.quiz.ui;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -18,7 +17,6 @@ public class ShowDay extends AppCompatActivity {
 
     Button button;
     LinearLayout linearLayout;
-    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +52,7 @@ public class ShowDay extends AppCompatActivity {
                 }
             });
 
-            button.setText("Number of day = " + (i + 1));
+            button.setText(getResources().getString(R.string.number_of_day) + " " + (i + 1));
 
             linearLayout.addView(view);
         }
