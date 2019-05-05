@@ -1,6 +1,7 @@
 package com.example.jd.quiz.ui;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -52,6 +53,10 @@ public class ShowAnswer extends AppCompatActivity implements CreateAnswersOfDay.
             textView = view.findViewById(R.id.view_ask_answer);
 
             textView.setText(String.valueOf((i+1) + " ask  =  " + numberOfTheDay.getArrayAnswer()[i] + " answer"));
+
+            if(i == 27 || i == 28 || i == 29) {
+                textView.setTextColor(Color.RED);
+            }
 
             layout.addView(view);
 
