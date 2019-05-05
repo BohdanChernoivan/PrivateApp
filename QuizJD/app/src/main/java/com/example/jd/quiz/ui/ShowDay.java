@@ -13,10 +13,12 @@ import com.example.jd.quiz.logic.abstract_factory.NumberOfTheDay;
 
 import java.util.List;
 
+
 public class ShowDay extends AppCompatActivity {
 
     Button button;
     LinearLayout linearLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
