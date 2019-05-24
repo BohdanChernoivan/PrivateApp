@@ -55,7 +55,7 @@ public class ShowAnswer extends AppCompatActivity implements CreateAnswersOfDay.
             textView.setText(String.valueOf((i+1) + " ask  =  " + numberOfTheDay.getArrayAnswer()[i] + " answer"));
 
             if(i == 27 || i == 28 || i == 29) {
-                textView.setTextColor(Color.RED);
+                textView.setTextColor(Color.MAGENTA);
             }
 
             layout.addView(view);
