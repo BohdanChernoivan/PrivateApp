@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">QuizJD</string>
+    <string name="number_of_day">Number of day =</string>
+    <string name="page_one">Page_one</string>
+    <string name="page_two">Page_two</string>
+    <string name="page_three">Page_two</string>
+</resources>
