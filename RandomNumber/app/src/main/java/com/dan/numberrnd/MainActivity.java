@@ -26,12 +26,13 @@ public class MainActivity extends AppCompatActivity implements PresenterShowMain
         startApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(edit_start_num.equals("")) {
+                if (edit_start_num.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "You did't specify a minimum", Toast.LENGTH_LONG).show();
-                } else if(edit_end_num.equals("")) {
+                } else if (edit_end_num.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "You did't specify a maximum", Toast.LENGTH_LONG).show();
-                } else
-                getRndNum(Integer.parseInt(edit_start_num.getText().toString()), Integer.parseInt(edit_end_num.getText().toString()));
+                } else {
+                    getRndNum(Integer.parseInt(edit_start_num.getText().toString()), Integer.parseInt(edit_end_num.getText().toString()));
+                }
             }
         });
     }
