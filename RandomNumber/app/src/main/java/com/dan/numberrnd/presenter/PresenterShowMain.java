@@ -1,4 +1,4 @@
-package com.dan.numberrnd;
+package com.dan.numberrnd.presenter;
 
 import java.util.Random;
 

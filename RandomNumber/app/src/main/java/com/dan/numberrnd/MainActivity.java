@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dan.numberrnd.presenter.PresenterShowMain;
+
 public class MainActivity extends AppCompatActivity implements PresenterShowMain.RandomizerNum{
 
     TextView showNum;
